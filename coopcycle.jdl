@@ -1,0 +1,64 @@
+entity Cooperative{
+	id Long required
+	name String required minlength(3)
+    region String required
+}
+
+entity Restaurant{
+	restId Long required
+	name String required minlength(3)
+    adress String required
+    theme String
+    review Long min(1) max(5)
+    
+}
+
+entity Livreur{
+	livId Long required
+    name String required 
+    
+}
+
+entity Client{
+	clientId Long required
+    clientName String required
+    clientRegion String
+}
+
+entity Panier{
+	id Long required
+    price Long required
+}
+
+entity Conseil{
+    directeur String required
+}
+
+relationship OneToMany{
+	Cooperative to Restaurant
+}
+
+relationship OneToMany{
+	Cooperative to Livreur
+}
+
+relationship OneToMany{
+	Cooperative to Client
+}
+
+relationship OneToOne {
+	Client to Panier
+}
+
+relationship OneToMany{
+	Restaurant to Panier
+}
+
+relationship OneToOne{
+	Cooperative to Conseil
+}
+
+relationship OneToMany{
+	Livreur to Panier
+}
+
