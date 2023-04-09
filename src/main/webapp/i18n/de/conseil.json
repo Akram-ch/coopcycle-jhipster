@@ -1,0 +1,25 @@
+{
+  "coopcycleApp": {
+    "conseil": {
+      "home": {
+        "title": "Conseils",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Conseil erstellen",
+        "createOrEditLabel": "Conseil erstellen oder bearbeiten",
+        "notFound": "Keine Conseils gefunden"
+      },
+      "created": "Conseil erstellt mit ID {{ param }}",
+      "updated": "Conseil aktualisiert mit ID {{ param }}",
+      "deleted": "Conseil gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Conseil {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Conseil"
+      },
+      "id": "ID",
+      "directeur": "Directeur",
+      "cooperative": "Cooperative"
+    }
+  }
+}

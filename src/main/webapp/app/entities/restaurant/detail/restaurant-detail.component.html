@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="restaurant">
+      <h2 data-cy="restaurantDetailsHeading"><span jhiTranslate="coopcycleApp.restaurant.detail.title">Restaurant</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ restaurant.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.restaurant.restId">Rest Id</span></dt>
+        <dd>
+          <span>{{ restaurant.restId }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.restaurant.name">Name</span></dt>
+        <dd>
+          <span>{{ restaurant.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.restaurant.adress">Adress</span></dt>
+        <dd>
+          <span>{{ restaurant.adress }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.restaurant.theme">Theme</span></dt>
+        <dd>
+          <span>{{ restaurant.theme }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.restaurant.review">Review</span></dt>
+        <dd>
+          <span>{{ restaurant.review }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.restaurant.cooperative">Cooperative</span></dt>
+        <dd>
+          <div *ngIf="restaurant.cooperative">
+            <a [routerLink]="['/cooperative', restaurant.cooperative.id, 'view']">{{ restaurant.cooperative.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/restaurant', restaurant.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

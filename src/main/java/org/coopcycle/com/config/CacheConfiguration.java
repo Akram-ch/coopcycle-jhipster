@@ -48,6 +48,17 @@ public class CacheConfiguration {
             createCache(cm, org.coopcycle.com.domain.User.class.getName());
             createCache(cm, org.coopcycle.com.domain.Authority.class.getName());
             createCache(cm, org.coopcycle.com.domain.User.class.getName() + ".authorities");
+            createCache(cm, org.coopcycle.com.domain.Cooperative.class.getName());
+            createCache(cm, org.coopcycle.com.domain.Cooperative.class.getName() + ".restaurants");
+            createCache(cm, org.coopcycle.com.domain.Cooperative.class.getName() + ".livreurs");
+            createCache(cm, org.coopcycle.com.domain.Cooperative.class.getName() + ".clients");
+            createCache(cm, org.coopcycle.com.domain.Restaurant.class.getName());
+            createCache(cm, org.coopcycle.com.domain.Restaurant.class.getName() + ".paniers");
+            createCache(cm, org.coopcycle.com.domain.Livreur.class.getName());
+            createCache(cm, org.coopcycle.com.domain.Livreur.class.getName() + ".paniers");
+            createCache(cm, org.coopcycle.com.domain.Client.class.getName());
+            createCache(cm, org.coopcycle.com.domain.Panier.class.getName());
+            createCache(cm, org.coopcycle.com.domain.Conseil.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

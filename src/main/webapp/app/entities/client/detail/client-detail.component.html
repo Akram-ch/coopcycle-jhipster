@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="client">
+      <h2 data-cy="clientDetailsHeading"><span jhiTranslate="coopcycleApp.client.detail.title">Client</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ client.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.client.clientId">Client Id</span></dt>
+        <dd>
+          <span>{{ client.clientId }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.client.clientName">Client Name</span></dt>
+        <dd>
+          <span>{{ client.clientName }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.client.clientRegion">Client Region</span></dt>
+        <dd>
+          <span>{{ client.clientRegion }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.client.panier">Panier</span></dt>
+        <dd>
+          <div *ngIf="client.panier">
+            <a [routerLink]="['/panier', client.panier.id, 'view']">{{ client.panier.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.client.cooperative">Cooperative</span></dt>
+        <dd>
+          <div *ngIf="client.cooperative">
+            <a [routerLink]="['/cooperative', client.cooperative.id, 'view']">{{ client.cooperative.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/client', client.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

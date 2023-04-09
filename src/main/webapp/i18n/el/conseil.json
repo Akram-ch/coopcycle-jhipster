@@ -1,0 +1,25 @@
+{
+  "coopcycleApp": {
+    "conseil": {
+      "home": {
+        "title": "Conseils",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Conseil",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Conseil",
+        "notFound": "No Conseils found"
+      },
+      "created": "Ένα νέο Conseil έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Conseil έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Conseil έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Conseil {{ id }};"
+      },
+      "detail": {
+        "title": "Conseil"
+      },
+      "id": "ID",
+      "directeur": "Directeur",
+      "cooperative": "Cooperative"
+    }
+  }
+}

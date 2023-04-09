@@ -1,0 +1,25 @@
+{
+  "coopcycleApp": {
+    "conseil": {
+      "home": {
+        "title": "Conseils",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Conseil",
+        "createOrEditLabel": "Créer ou éditer un Conseil",
+        "notFound": "Aucun Conseil trouvé"
+      },
+      "created": "Un nouveau Conseil a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Conseil avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Conseil avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Conseil {{ id }} ?"
+      },
+      "detail": {
+        "title": "Conseil"
+      },
+      "id": "ID",
+      "directeur": "Directeur",
+      "cooperative": "Cooperative"
+    }
+  }
+}
